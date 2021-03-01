@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LayoutDesigns</string>
+    <string name="change_text_views">Change Values</string>
+    <string name="reset">Reset</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="this_is_our_first_layout">This is our first Layout</string>
+    <string name="activity_second">Activity Second</string>
+    <string name="plus_5_points">+5 Points</string>
+    <string name="plus_10_points">+10 Points</string>
+    <string name="plus_15_points">+15 Points</string>
+    <string name="plus_20_points">+20 Points</string>
+    <string name="reset_score">Reset Score</string>
+    <string name="activity_score_card">ScoreCard Activity</string>
+</resources>

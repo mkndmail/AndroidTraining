@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="change_text_views">Change Values</string>
+    <string name="reset">Reset</string>
+    <string name="activity_second">Activity Second</string>
+</resources>
