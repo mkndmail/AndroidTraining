@@ -1,4 +1,4 @@
-package com.example.layoutdesigns;
+package com.example.layoutdesigns.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.layoutdesigns.R;
+import com.example.layoutdesigns.model.Employee;
 
 import java.util.List;
 

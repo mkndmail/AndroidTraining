@@ -1,11 +1,11 @@
-package com.example.layoutdesigns;
+package com.example.layoutdesigns.model;
 
 public class Employee {
-    String name;
-    String department;
-    String technology;
-    int age;
-    boolean isPresent;
+   public    String name;
+    public String department;
+    public String technology;
+    public int age;
+    public boolean isPresent;
 
     public Employee(String name, String department, String technology, int age, boolean isPresent) {
         this.name = name;

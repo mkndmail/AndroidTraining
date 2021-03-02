@@ -1,9 +1,13 @@
-package com.example.layoutdesigns;
+package com.example.layoutdesigns.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.example.layoutdesigns.R;
+import com.example.layoutdesigns.model.Employee;
+import com.example.layoutdesigns.adapter.EmployeeAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

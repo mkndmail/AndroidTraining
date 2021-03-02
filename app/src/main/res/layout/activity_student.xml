@@ -4,12 +4,13 @@
 <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rv_employees"
+    android:id="@+id/rv_student"
+    android:background="#6f4e37"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:context=".activities.EmployeeListActivity"
+    tools:context=".activities.MainActivity"
     >
 
 </androidx.recyclerview.widget.RecyclerView>
