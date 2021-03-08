@@ -25,15 +25,16 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
     @Override
     public void onBindViewHolder(@NonNull EmployeeViewHolder holder, int position) {
         Employee employee = employeeList.get(position);
-        holder.txtEmpName.setText("Name :" + employee.name);
-        holder.txtAge.setText("Age: " + employee.age);
-        holder.txtDepartment.setText("Department: " + employee.department);
-        holder.txtTechnology.setText("Technology: " + employee.technology);
-        if (employee.isPresent) {
+        holder.txtEmpName.setText("Name :" + employee.getName());
+        holder.txtAge.setText("Age: " + employee.getAge());
+        holder.txtDepartment.setText("Department: " + employee.getDepartment());
+        holder.txtTechnology.setText("Technology: " + employee.getTechnology());
+        if (employee.isPresent()) {
             holder.imgIsPresent.setImageResource(R.drawable.ic_present);
-        } else {
-            holder.imgIsPresent.setImageResource(R.drawable.ic_absent);
         }
+
+            holder.imgIsPresent.setImageResource(R.drawable.ic_absent);
+
     }
 
     @NonNull

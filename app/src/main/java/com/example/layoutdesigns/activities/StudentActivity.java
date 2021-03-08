@@ -1,11 +1,19 @@
 package com.example.layoutdesigns.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.layoutdesigns.R;
+import com.example.layoutdesigns.interfaces.IRecyclerClick;
+import com.example.layoutdesigns.model.Employee;
 import com.example.layoutdesigns.model.Student;
 import com.example.layoutdesigns.adapter.StudentAdapter;
 
@@ -13,21 +21,132 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class StudentActivity extends AppCompatActivity {
-    private RecyclerView rvStudents;
-    private StudentAdapter studentAdapter;
+public class StudentActivity extends AppCompatActivity   {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
-        rvStudents = findViewById(R.id.rv_student);
-        List<Student> studentList = getListOfStudent();
-        studentAdapter = new StudentAdapter(studentList);
-        rvStudents.setAdapter(studentAdapter);
+
+        RecyclerView rvStudents = findViewById(R.id.rv_student);
+//        List<Student> studentList = getListOfStudent();
+        // List<Employee> employeeList = getListOfEmployees();
+        //   private RecyclerView rvStudents;
+//        StudentAdapter studentAdapter = new StudentAdapter( getListOfStudent(), StudentActivity.this);
+        rvStudents.setAdapter(new StudentAdapter(getListOfStudent(), StudentActivity.this));
+        rvStudents.setLayoutManager(new LinearLayoutManager(StudentActivity.this));
+//        rvStudents.setLayoutManager(new GridLayoutManager(StudentActivity.this, 2));
+//        rvStudents.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+
+/*
+        Button btnOne = findViewById(R.id.btn_one);
+        btnOne.setOnClickListener(this);
+        Button btnTwo = findViewById(R.id.btn_two);
+        btnTwo.setOnClickListener(this);*/
 
     }
-    List<Student> getListOfStudent(){
-        List <Student> studentList = new ArrayList<>();
+
+    public void taskOnButtonClick() {
+        Toast.makeText(StudentActivity.this, "Clicked!!", Toast.LENGTH_SHORT).show();
+    }
+
+//    List<Employee> getListOfEmployees() {
+//        List<Employee> employeeList = new ArrayList<>();
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        employeeList.add(new Employee("Mukund", "Technology", "Android", getAge(), getIsPresent()));
+//        return employeeList;
+//    }
+
+    List<Student> getListOfStudent() {
+        List<Student> studentList = new ArrayList<>();
         studentList.add(new Student("Karan", "Engineering", "Jalandhar", getAge(), getIsPresent()));
         studentList.add(new Student("Arun", "Engineering", "Ludhiana", getAge(), getIsPresent()));
         studentList.add(new Student("Hanuman ", "Engineering", "Chandigarh", getAge(), getIsPresent()));
@@ -63,4 +182,26 @@ public class StudentActivity extends AppCompatActivity {
         return new Random().nextInt(60);
     }
 
+//    @Override
+//    public void onClick(View v) {
+//      /*  switch (v.getId()) {
+//            case R.id.btn_one:
+//            case R.id.btn_two:
+//            case R.id.btn_three:
+//            case R.id.btn_four:
+//            case R.id.btn_five:
+//                taskOnButtonClick();
+//                break;
+//        }*/
+//    }
+
+//    @Override
+//    public void onRecyclerItemClick(Student student) {
+//
+//    }
+
+//    @Override
+//    public void onRecyclerItemClick(Student student) {
+//        Toast.makeText(StudentActivity.this, "Hahaha: " + student.getAddress(), Toast.LENGTH_SHORT).show();
+//    }
 }
