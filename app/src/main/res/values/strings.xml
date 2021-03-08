@@ -11,4 +11,6 @@
     <string name="plus_20_points">+20 Points</string>
     <string name="reset_score">Reset Score</string>
     <string name="activity_score_card">ScoreCard Activity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

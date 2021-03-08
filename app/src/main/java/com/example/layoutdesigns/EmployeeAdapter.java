@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -14,9 +15,11 @@ import java.util.List;
 public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.EmployeeViewHolder> {
 
     private List<Employee> employeeList;
+    private ItemClickListener itemClickListener;
 
-    public EmployeeAdapter(List<Employee> employees) {
+    public EmployeeAdapter(List<Employee> employees, ItemClickListener itemClickListener) {
         employeeList = employees;
+        this.itemClickListener = itemClickListener;
     }
 
     @Override
@@ -31,6 +34,9 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
         } else {
             holder.imgIsPresent.setImageResource(R.drawable.ic_absent);
         }
+        holder.clParent.setOnClickListener(v -> {
+            itemClickListener.itemClick(employee);
+        });
     }
 
     @NonNull
@@ -45,6 +51,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
         return employeeList.size();
     }
 
+
     public class EmployeeViewHolder extends RecyclerView.ViewHolder {
         ImageView imgProfile;
         TextView txtEmpName;
@@ -52,6 +59,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
         TextView txtAge;
         TextView txtTechnology;
         ImageView imgIsPresent;
+        ConstraintLayout clParent;
 
         public EmployeeViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +69,14 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
             txtTechnology = itemView.findViewById(R.id.txt_technology);
             txtAge = itemView.findViewById(R.id.txt_age);
             imgIsPresent = itemView.findViewById(R.id.img_is_present);
+            clParent = itemView.findViewById(R.id.cl_parent);
         }
     }
+
+    interface ItemClickListener {
+        void itemClick(Employee employee);
+
+    }
+
 }
+
