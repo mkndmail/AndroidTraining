@@ -1,4 +1,4 @@
-package com.example.layoutdesigns.adapter;
+package com.example.layoutdesigns;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,34 +7,36 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.layoutdesigns.R;
-import com.example.layoutdesigns.model.Employee;
 
 import java.util.List;
 
 public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.EmployeeViewHolder> {
 
     private List<Employee> employeeList;
+    private ItemClickListener itemClickListener;
 
-    public EmployeeAdapter(List<Employee> employees) {
+    public EmployeeAdapter(List<Employee> employees, ItemClickListener itemClickListener) {
         employeeList = employees;
+        this.itemClickListener = itemClickListener;
     }
 
     @Override
     public void onBindViewHolder(@NonNull EmployeeViewHolder holder, int position) {
         Employee employee = employeeList.get(position);
-        holder.txtEmpName.setText("Name :" + employee.getName());
-        holder.txtAge.setText("Age: " + employee.getAge());
-        holder.txtDepartment.setText("Department: " + employee.getDepartment());
-        holder.txtTechnology.setText("Technology: " + employee.getTechnology());
-        if (employee.isPresent()) {
+        holder.txtEmpName.setText("Name :" + employee.name);
+        holder.txtAge.setText("Age: " + employee.age);
+        holder.txtDepartment.setText("Department: " + employee.department);
+        holder.txtTechnology.setText("Technology: " + employee.technology);
+        if (employee.isPresent) {
             holder.imgIsPresent.setImageResource(R.drawable.ic_present);
-        }
-
+        } else {
             holder.imgIsPresent.setImageResource(R.drawable.ic_absent);
-
+        }
+        holder.clParent.setOnClickListener(v -> {
+            itemClickListener.itemClick(employee);
+        });
     }
 
     @NonNull
@@ -49,6 +51,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
         return employeeList.size();
     }
 
+
     public class EmployeeViewHolder extends RecyclerView.ViewHolder {
         ImageView imgProfile;
         TextView txtEmpName;
@@ -56,6 +59,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
         TextView txtAge;
         TextView txtTechnology;
         ImageView imgIsPresent;
+        ConstraintLayout clParent;
 
         public EmployeeViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -65,6 +69,14 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
             txtTechnology = itemView.findViewById(R.id.txt_technology);
             txtAge = itemView.findViewById(R.id.txt_age);
             imgIsPresent = itemView.findViewById(R.id.img_is_present);
+            clParent = itemView.findViewById(R.id.cl_parent);
         }
     }
+
+    interface ItemClickListener {
+        void itemClick(Employee employee);
+
+    }
+
 }
+
