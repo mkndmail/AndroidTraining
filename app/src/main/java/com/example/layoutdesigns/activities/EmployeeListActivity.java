@@ -8,18 +8,19 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.layoutdesigns.EmployeeAdapter;
 import com.example.layoutdesigns.fragments.EmployeeDetailFragment;
 
 import com.example.layoutdesigns.R;
 import com.example.layoutdesigns.model.Employee;
-import com.example.layoutdesigns.adapter.EmployeeAdapter;
+//import com.example.layoutdesigns.adapter.EmployeeAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 
-public class EmployeeListActivity extends AppCompatActivity implements EmployeeAdapter.ItemClickListener {
+public class EmployeeListActivity extends AppCompatActivity {
     private RecyclerView rvEmployees;
     private EmployeeAdapter employeeAdapter;
     private LinearLayout llRv;
@@ -32,7 +33,7 @@ public class EmployeeListActivity extends AppCompatActivity implements EmployeeA
         rvEmployees = findViewById(R.id.rv_employees);
         frame_container = findViewById(R.id.frame_container);
         List<Employee> employeeList = getListOfEmployees();
-        employeeAdapter = new EmployeeAdapter(employeeList, (EmployeeAdapter.ItemClickListener) this);
+        //employeeAdapter = new EmployeeAdapter(employeeList, (EmployeeAdapter.ItemClickListener) this);
         rvEmployees.setAdapter(employeeAdapter);
     }
 
@@ -139,14 +140,14 @@ public class EmployeeListActivity extends AppCompatActivity implements EmployeeA
         return new Random().nextInt(10) % 2 == 0;
     }
 
-    @Override
-    public void itemClick(Employee employee) {
-        rvEmployees.setVisibility(View.GONE);
-        frame_container.setVisibility(View.VISIBLE);
-        getSupportFragmentManager().beginTransaction().
-                add(R.id.frame_container, EmployeeDetailFragment.newInstance(employee))
-                .commit();
-    }
+//    @Override
+//    public void itemClick(Employee employee) {
+//        rvEmployees.setVisibility(View.GONE);
+//        frame_container.setVisibility(View.VISIBLE);
+//        getSupportFragmentManager().beginTransaction().
+//                add(R.id.frame_container, EmployeeDetailFragment.newInstance(employee))
+//                .commit();
+//    }
 
     @Override
     public void onBackPressed() {
@@ -160,4 +161,9 @@ public class EmployeeListActivity extends AppCompatActivity implements EmployeeA
         frame_container.setVisibility(View.GONE);
         rvEmployees.setVisibility(View.VISIBLE);
     }
+
+//    @Override
+//    public void itemClick(com.example.layoutdesigns.Employee employee) {
+//
+//    }
 }
