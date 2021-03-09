@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 
 import com.example.layoutdesigns.R;
 import com.example.layoutdesigns.fragments.TestFrag;
-import com.example.layoutdesigns.fragments.TestFragment;
+
 
 public class FragmentTest extends AppCompatActivity {
 
