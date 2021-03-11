@@ -13,17 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello_world"
-        android:textColor="@color/black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/text_first_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textColor="@android:color/holo_orange_dark"
         android:text="@string/this_is_our_first_layout"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/holo_orange_dark" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,6 +57,7 @@
         android:layout_marginTop="8dp"
         android:hint="Please Enter Your name"
         android:inputType="textPersonName" />
+
     <EditText
         android:id="@+id/edt_last_name"
         android:layout_width="match_parent"
@@ -65,6 +66,7 @@
         android:layout_marginTop="8dp"
         android:hint="Enter Last name"
         android:inputType="textPersonName" />
+
     <EditText
         android:id="@+id/edt_age"
         android:layout_width="match_parent"
@@ -79,8 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/activity_second"
-        android:onClick="startActivityB"/>
+        android:onClick="startActivityB"
+        android:text="@string/activity_second" />
 
     <Button
         android:id="@+id/btn_scorecard_activity"
@@ -88,6 +90,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="startActivityB"
+        android:text="@string/activity_score_card" />
+
+    <Button
+        android:id="@+id/btn_add_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="startAddNameActivity"
         android:text="@string/activity_score_card" />
 
 </LinearLayout>

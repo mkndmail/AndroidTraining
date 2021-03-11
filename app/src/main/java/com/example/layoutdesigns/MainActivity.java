@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void startAddNameActivity(View view) {
+        startActivity(new Intent(MainActivity.this, AddNameActivity.class));
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
