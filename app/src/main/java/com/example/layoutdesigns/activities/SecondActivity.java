@@ -1,4 +1,4 @@
-package com.example.layoutdesigns;
+package com.example.layoutdesigns.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import com.example.layoutdesigns.R;
 
 public class SecondActivity extends AppCompatActivity {
     private EditText edtPersonName, edtLastName, edtAge;

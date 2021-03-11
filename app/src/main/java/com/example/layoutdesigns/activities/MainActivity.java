@@ -1,4 +1,4 @@
-package com.example.layoutdesigns;
+package com.example.layoutdesigns.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
+import com.example.layoutdesigns.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textHelloWorld;

@@ -11,6 +11,17 @@
     <string name="plus_20_points">+20 Points</string>
     <string name="reset_score">Reset Score</string>
     <string name="activity_score_card">ScoreCard Activity</string>
+    <string name="textview">TextView</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_age">Enter Age</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="enter_your_department">Enter Your Department</string>
+    <string name="submit_details">Submit Details</string>
 </resources>

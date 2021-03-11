@@ -1,8 +1,10 @@
-package com.example.layoutdesigns;
+package com.example.layoutdesigns.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.layoutdesigns.R;
 
 public class ScoreCardActivity extends AppCompatActivity {
 

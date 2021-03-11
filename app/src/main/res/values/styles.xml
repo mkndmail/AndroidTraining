@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextName">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:color">
+            @color/black
+        </item>
+    </style>
+
+    <style name="TextDept">
+        <item name="android:textSize">
+            12sp
+        </item>
+        <item name="android:textColor">
+            @color/red
+        </item>
+    </style>
+
+    <style name="TextAddress">
+        <item name="android:textSize">
+            10sp
+        </item>
+        <item name="android:textColor">
+            @color/blue
+        </item>
+    </style>
+
+    <style name="TextAge">
+        <item name="android:textSize">
+            8sp
+        </item>
+        <item name="android:textColor">
+            @color/green
+        </item>
+    </style>
+
+
+</resources>
