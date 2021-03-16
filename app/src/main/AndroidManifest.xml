@@ -9,24 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LayoutDesigns">
-        <activity android:name=".AddNameActivity" />
-
-
-        <activity android:name=".activities.FragmentTest">
-
-        </activity>
-        <activity android:name=".activities.RecyclerStudentSecondActivity" />
-        <activity android:name=".activities.StudentActivity"/>
-        <activity android:name=".activities.EmployeeListActivity" />
-        <activity android:name=".activities.ScoreCardActivity" />
-        <activity android:name=".activities.SecondActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".StudentRecordActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".AddNameActivity" />
+        <activity android:name=".activities.FragmentTest"></activity>
+        <activity android:name=".activities.RecyclerStudentSecondActivity" />
+        <activity android:name=".activities.StudentActivity" />
+        <activity android:name=".activities.EmployeeListActivity" />
+        <activity android:name=".activities.ScoreCardActivity" />
+        <activity android:name=".activities.SecondActivity" />
+        <activity android:name=".activities.MainActivity">
+
         </activity>
     </application>
 

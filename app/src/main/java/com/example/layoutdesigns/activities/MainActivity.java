@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.layoutdesigns.AddNameActivity;
 import com.example.layoutdesigns.R;
 
 public class MainActivity extends AppCompatActivity {

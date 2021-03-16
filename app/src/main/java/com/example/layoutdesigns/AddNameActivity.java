@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 public class AddNameActivity extends AppCompatActivity {
     private EditText edt_name,
@@ -14,8 +15,9 @@ public class AddNameActivity extends AppCompatActivity {
             edt_mobile_number,
             edt_age;
     private Button btn_save_details;
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
+
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
