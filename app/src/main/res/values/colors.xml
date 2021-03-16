@@ -14,4 +14,7 @@
     <color name="colorBrown">#6f4e37</color>
     <color name="darkslategray">#8DEEEE</color>
     <color name="teal">#008080</color>
+    <color name="background">#fff7da</color>
+    <color name="text">#4a312a</color>
+    <color name="button">#fd8f09</color>
 </resources>

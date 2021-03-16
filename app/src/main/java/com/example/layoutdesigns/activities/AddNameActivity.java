@@ -1,4 +1,4 @@
-package com.example.layoutdesigns;
+package com.example.layoutdesigns.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+
+import com.example.layoutdesigns.R;
 
 public class AddNameActivity extends AppCompatActivity {
     private EditText edt_name,
