@@ -2,8 +2,10 @@ package com.example.layoutdesigns.contract;
 
 import android.provider.BaseColumns;
 
+import com.example.layoutdesigns.activities.ViewDB;
+
 public class CarContract {
-    private CarContract() {
+    public CarContract(ViewDB viewDB) {
 
     }
 
@@ -16,9 +18,9 @@ public class CarContract {
         public static final String SQL_CREATE_ENTRIES_CAR_DB =
                 "CREATE TABLE " + CarContract.CarEntry.TABLE_NAME + " (" +
                         CarContract.CarEntry._ID + " INTEGER PRIMARY KEY," +
-                        CarEntry.COLUMN_CAR_NAME + " TEXT," +
-                        CarEntry.COLUMN_CAR_MODEL + " TEXT," +
-                        CarEntry.COLUMN_CAR_REG_NO + " TExT)";
+                        CarContract.CarEntry.COLUMN_CAR_NAME + " TEXT," +
+                        CarContract.CarEntry.COLUMN_CAR_MODEL + " TEXT," +
+                        CarContract.CarEntry.COLUMN_CAR_REG_NO + " TEXT)";
 
         public static final String SQL_DELETE_ENTRIES_CAR_DB =
                 "DROP TABLE IF EXISTS " + CarContract.CarEntry.TABLE_NAME;
